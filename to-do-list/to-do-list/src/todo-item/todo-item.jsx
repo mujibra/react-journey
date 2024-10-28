@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 
-export default function TodoItem({ todo }) {
+export default function TodoItem({ todo, fetchListDetail }) {
   console.log(todo);
 
   return (
@@ -25,6 +25,7 @@ export default function TodoItem({ todo }) {
       </CardContent>
       <CardActions>
         <Button
+        onClick={() => fetchListDetail(todo?.id)}
           sx={{
             backgroundColor: "#000000",
             color: "#fff",
