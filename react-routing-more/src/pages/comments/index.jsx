@@ -3,8 +3,6 @@ import useFetch from "../../hooks/use-fetch";
 export default function CommentsList() {
     const { data, loading, error } = useFetch("https://dummyjson.com/comments");
 
-    console.log(data);
-
     if (loading) return <h1>Some salty is coming!</h1>;
 
     return (
