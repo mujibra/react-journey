@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchListsProducts } from "./api";
 
 export default function ReactQuery() {
-  const { data, isLoading, productList } = useQuery({
+  const { isLoading, productList } = useQuery({
     queryKey: ["productList"],
     queryFn: () => fetchListsProducts(),
   });
